@@ -1,3 +1,21 @@
+#/*****************************************************************************
+#* Copyright (C) 2017 by Charles Edward Pax                                   *
+#*                                                                            *
+#* This file is a part of Hello                                               *
+#*                                                                            *
+#* Hello is an example program demonstrating several aspects of               *
+#* C programming, Doxygen documentation, and Make.                            *
+#*                                                                            *
+#* Hello is distributed in the hope that it will be useful, but WITHOUT       *
+#* ANY WARRANTY; eithout even the implied warranty of MERCHANTABILITY or      *
+#* FITNESS FOR A PARTIFULAR PURPOSE. See the GNU Lesser General Public        *
+#* License for more details.                                                  *
+#*                                                                            *
+#* You should have received a copy of the GNU Lesser General Public License   *
+#* along with Box. If not, see <http://www.gnu.org/license/>.                 *
+#*                                                                            *
+#******************************************************************************/
+
 # This Makefile tells the program 'make' what to do to compile the program.
 
 # This defines the name of the executable the compiler will create.
