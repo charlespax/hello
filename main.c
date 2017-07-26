@@ -42,10 +42,10 @@
 
 int main(void)
 {
-    int rando = foo(rand()); /**< A random number */
+    int rando = foo(rand()); // A random number */
     int i = 0;
     long c = 0;
-    int max = 15; /**< Maximum number of attempts */
+    int max = 15; // Maximum number of attempts */
 
     srand(time(NULL)); // Initialize the Pseudo-Random Number Generator (PPRNG)
 
