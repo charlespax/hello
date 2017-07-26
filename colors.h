@@ -17,14 +17,16 @@
  ******************************************************************************/
 
 /**
- * @file colors.h
- * @author Charles Edward Pax <charles.pax@gmail.com>
- * @date 2017-07-18
- * @brief Defines colors and other effects using ASCII excape sequences
+ * \file colors.h
+ * \author Charles Edward Pax <charles.pax@gmail.com>
+ * \date 2017-07-18
+ * \brief Defines colors and other effects using ASCII excape sequences
  *
- * This is where would be written a more in-depth explaination of this file
- * and what it does.
- * @see http://paxinstruments.com/store/
+ * \details This is where would be written a more in-depth explaination of
+ * this file and what it does.
+ *
+ * \see http://paxinstruments.com/store/
+ *
  */
 
 #ifndef COLORS_H_

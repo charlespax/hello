@@ -17,13 +17,14 @@
  ******************************************************************************/
 
 /**
- * @file main.c
- * @author Charles Edward Pax <charles.pax@gmail.com>
- * @date 2017-07-18
- * @brief File containing example C code and Doxygen documentation
+ * \file main.c
+ * \author Charles Edward Pax <charles.pax@gmail.com>
+ * \date 2017-07-18
+ * \brief File containing example C code and Doxygen documentation
  *
- * This is where would be written a more in-depth explaination of this file
- * and what it does.
+ * \details This is where would be written a more in-depth explaination of
+ * this file and what it does.
+ *
  * @see http://paxinstruments.com/store/
  */
 
@@ -34,19 +35,17 @@
 #include "colors.h"
 
 /**
- * Function: main
- * --------------
- *  The main program
+ *  \brief The main() program.
  *
- *  returns: zero upon successful execution.
+ *  \return 0 on success
  */
 
 int main(void)
 {
-    int y = foo(rand()); // Generate random number
+    int rando = foo(rand()); /**< A random number */
     int i = 0;
     long c = 0;
-    int max = 15;
+    int max = 15; /**< Maximum number of attempts */
 
     srand(time(NULL)); // Initialize the Pseudo-Random Number Generator (PPRNG)
 
@@ -58,10 +57,10 @@ int main(void)
 
     // Generate random numbers until one is less than user input
     do {
-        y=rand()/100000;
-        printf("%d %d\n", i, y);
+        rando=rand()/100000;
+        printf("%d %d\n", i, rando);
         i++;
-    } while(y>c && i<=15);
+    } while(rando>c && i<=15);
 
     // Tell the user what they entered and the square
     printf("\n");

@@ -1,32 +1,33 @@
 #include "foo.h"  /* Include the header (not strictly necessary here) */
 
 /**
- * Function: foo
- * -------------
- *  Return the input x + 5
+ *  \brief Return the input x + 5
  *
- *  x: int value
+ *  \param[in] x is an integer to which you would like to add five.
+ *  \param[out] a is x + 5.
  *
- *  returns: x + 5
+ *  \return a
  */
 
 int foo(int x)
 {
-    return x + 5;
+    int a = 0;
+    a = x+5;
+    return a;
 }
 
 /**
- * Function: square
- * ----------------
- *  Returns the square of the input
+ *  \brief Returns the square of the input
  *
- *  x: integer value
+ *  \param[in] x is an you would like to squa
+ *  \param[out] a is x squared
  *
- *  returns: x * x
+ *  \return a
  */
 
 long square(int x)
 {
-    return x * x;
+    int a = x * x;
+    return a;
 }
 

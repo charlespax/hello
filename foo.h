@@ -17,41 +17,21 @@
  ******************************************************************************/
 
 /**
- * @file foo.h
- * @author Charles Edward Pax <charles.pax@gmail.com>
- * @date 2017-07-18
- * @brief File containing example C code and Doxygen documentation
+ * \file foo.h
+ * \author Charles Edward Pax <charles.pax@gmail.com>
+ * \date 2017-07-18
+ * \brief File containing example C code and Doxygen documentation
  *
- * This is where would be written a more in-depth explaination of this file
- * and what it does.
+ * \details This is where would be written a more in-depth explaination of
+ * this file and what it does.
+ *
  * @see http://paxinstruments.com/store/
  */
 
 #ifndef FOO_H_
 #define FOO_H_
 
-/**
- * Function: foo
- * -------------
- *  Return the input x + 5
- *
- *  x: int value
- *
- *  returns: x + 5
- */
-
 int foo(int x);
-
-/**
- * Function: square
- * ----------------
- *  Returns the square of the input
- *
- *  x: integer value
- *
- *  returns: x * x
- */
-
 long square(int x);
 
 #endif // FOO_H_
