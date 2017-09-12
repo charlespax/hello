@@ -43,8 +43,9 @@ $(APPNAME): $(OBJ)
 # dependencies have changed.
 .PHONY: clean tags docs
 
-run: $(OUTNAME)
-	./$(OUTNAME)
+run: $(APPNAME)
+	echo $(APPNAME)
+	./$(APPNAME)
 
 tags:
 	ctags -R .
@@ -54,5 +55,5 @@ docs:
 	doxygen Doxyfile 
 
 clean:
-	@rm -f *.o $(OUTNAME)
-	@rm -rf latex/ html/
+	@rm -f *.o $(APPNAME)
+	@rm -rf docs
