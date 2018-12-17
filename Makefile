@@ -25,27 +25,30 @@ APPNAME="hello"
 CC=gcc
 
 # This defined what directories to include in the compiler search path.
-CFLAGS=-I.
+CFLAGS=-I. -lncurses
 
 DEPS = foo.h
 
 OBJ = foo.o main.o
+
+all: $(APPNAME)
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 # In this section we put an '@' in front of the command. When the Makefile
 # is run the output of this command will not be displayed in the terminal.
+# $@ refers to what is on the left side of ':'.
+# $^ refers to what is on the right side of ':'.
 $(APPNAME): $(OBJ)
 	@gcc -o $@ $^ $(CFLAGS)
 
 # This section defines which Make commands should be run even if no
 # dependencies have changed.
-.PHONY: clean tags docs
+.PHONY: all clean tags docs
 
 run: $(APPNAME)
-	echo $(APPNAME)
-	./$(APPNAME)
+	@./$(APPNAME)
 
 tags:
 	ctags -R .
@@ -53,6 +56,14 @@ tags:
 # run 'doxygen -g' to create an initial Doxyfile
 docs:
 	doxygen Doxyfile 
+
+man_install:
+	@cp -r docs/man/man3/ /usr/local/share/man/
+	mandb
+
+man_uninstall:
+	@rm -rf /usr/local/share/man/man3/*hello.3
+	@mandb
 
 clean:
 	@rm -f *.o $(APPNAME)

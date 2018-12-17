@@ -31,8 +31,11 @@
 #ifndef FOO_H_
 #define FOO_H_
 
+#include <time.h>
+
 int foo(int x);
 long square(int x);
+void delay(unsigned int mseconds);
 
 #endif // FOO_H_
 
