@@ -34,6 +34,7 @@
 #include <stdlib.h>
 #include "colors.h"
 #include <ncurses.h>
+#include <unistd.h>
 
 /**
  *  \brief The main() program.
