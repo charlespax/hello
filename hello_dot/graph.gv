@@ -1,0 +1,6 @@
+digraph G {
+    vim -> write -> make -> succeed -> hello_world;
+    vim -> close;
+    make -> fail;
+}
+
