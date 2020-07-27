@@ -9,5 +9,8 @@ $(OUTPUTNAME):
 view: $(OUTPUTNAME)
 	@xdg-open $(OUTPUTNAME)
 
+open: all
+	xdg-open $(OUTPUTNAME)
+
 clean:
-	@rm -rf $(OUTPUTNAME)
+	@rm -rf output.*
