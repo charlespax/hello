@@ -68,3 +68,5 @@ man_uninstall:
 clean:
 	@rm -f *.o $(APPNAME)
 	@rm -rf docs
+	@rm -rf tags
+
