@@ -25,7 +25,7 @@ APPNAME="hello"
 CC=gcc
 
 # This defined what directories to include in the compiler search path.
-CFLAGS=-I. -lncurses
+CFLAGS=-I. -lncurses -g
 
 DEPS = foo.h
 
