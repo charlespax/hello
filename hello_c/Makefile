@@ -25,7 +25,9 @@ APPNAME="hello"
 CC=gcc
 
 # This defined what directories to include in the compiler search path.
-CFLAGS=-I. -lncurses -g
+CFLAGS=  -I .  # include '.' directory in the search path
+CFLAGS+= -lncurses  # link ncurses library for text-user-interface (TUI)
+CFLAGS+= -g  # add standard debug information
 
 DEPS = foo.h
 

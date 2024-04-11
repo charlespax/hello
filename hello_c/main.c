@@ -42,21 +42,18 @@
  *  \return 0 on success
  */
 
-int main(void)
-{
+int main(void) {
     int rando = foo(rand()); // A random number */
     int i = 0;
     long c = 0;
     int max = 15; // Maximum number of attempts */
 
-    // Init ncurses mode
-    initscr();
+    initscr(); // init ncurses mode
 
-    // hide cursor
-    curs_set (0);
-    int count =0;
-    while (count < 2) {
-        mvprintw (0, 0, "%d", count++);
+    curs_set (0); // 0 - hide cursor
+    int count =2;
+    while (count > 0) {
+        mvprintw (0, 0, "%d", count--);
         refresh ();
         sleep (1);
     }
@@ -102,7 +99,7 @@ int main(void)
     // Print a few lines from a file
     printf("\n");
     printf("Here is the first few lines of main.c:\n");
-    system("head -5 main.c");
+    system("head -4 main.c");
 
     // count up a bunch of times
     i = 0;
