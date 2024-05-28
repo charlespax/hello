@@ -51,11 +51,11 @@ int main(void) {
     initscr(); // init ncurses mode
 
     curs_set (0); // 0 - hide cursor
-    int count =2;
+    int count =20000;
     while (count > 0) {
         mvprintw (0, 0, "%d", count--);
         refresh ();
-        sleep (1);
+        usleep (1);
     }
     // end ncurses mode
     endwin();
