@@ -43,71 +43,71 @@
  */
 
 int main(void) {
-    int rando = foo(rand()); // A random number */
-    int i = 0;
-    long c = 0;
-    int max = 15; // Maximum number of attempts */
+        int rando = foo(rand()); // A random number */
+        int i = 0;
+        long c = 0;
+        int max = 15; // Maximum number of attempts */
 
-    initscr(); // init ncurses mode
+        initscr(); // init ncurses mode
 
-    curs_set (0); // 0 - hide cursor
-    int count =20000;
-    while (count > 0) {
-        mvprintw (0, 0, "%d", count--);
-        refresh ();
-        usleep (1);
-    }
-    // end ncurses mode
-    endwin();
+        curs_set (0); // 0 - hide cursor
+        int count =20000;
+        while (count > 0) {
+                mvprintw (0, 0, "%d", count--);
+                refresh ();
+                usleep (1);
+        }
+        // end ncurses mode
+        endwin();
 
-    srand(time(NULL)); // Initialize the Pseudo-Random Number Generator (PPRNG)
+        srand(time(NULL)); // Initialize the Pseudo-Random Number Generator (PPRNG)
 
-    // Get an integer from standard input
-    printf(CYAN "Hello, " BOLD "world!\n" ANSI_RESET);
-    printf("I will generate random numbers until one is less than your number.\n");
-    printf("Let's get this done in %i trys.\n", max);
-    printf("Enter an integer " UNDER "value" ANSI_RESET ": ");
-    scanf("%li", &c);
+        // Get an integer from standard input
+        printf(CYAN "Hello, " BOLD "world!\n" ANSI_RESET);
+        printf("I will generate random numbers until one is less than your number.\n");
+        printf("Let's get this done in %i trys.\n", max);
+        printf("Enter an integer " UNDER "value" ANSI_RESET ": ");
+        scanf("%li", &c);
 
-    // Generate random numbers until one is less than user input
-    do {
-        rando=rand()/100000;
-        printf("%d %d\n", i, rando);
-        i++;
-    } while(rando>c && i<=max);
+        // Generate random numbers until one is less than user input
+        do {
+                rando=rand()/100000;
+                printf("%d %d\n", i, rando);
+                i++;
+        } while(rando>c && i<=max);
 
-    // Tell the user the program status 
-    printf("\n");
-    printf("Number of tries: %i\n", i);
-    printf("Status: ");
-    if (i>max) {
-        printf(RED "ERROR" ANSI_RESET);
-    } else {
-        printf(GREEN "Success!" ANSI_RESET);
-    }
-    printf("\n");
-    printf("\n");
-    // Tell the user what they entered and the square of it
-    printf("You entered: %li\n", c);
-    printf("%li ^2 = %li\n", c, square(c));
+        // Tell the user the program status 
+        printf("\n");
+        printf("Number of tries: %i\n", i);
+        printf("Status: ");
+        if (i>max) {
+                printf(RED "ERROR" ANSI_RESET);
+        } else {
+                printf(GREEN "Success!" ANSI_RESET);
+        }
+        printf("\n");
+        printf("\n");
+        // Tell the user what they entered and the square of it
+        printf("You entered: %li\n", c);
+        printf("%li ^2 = %li\n", c, square(c));
 
-    // Print the contents of the current directory
-    printf("\n");
-    printf("Here is the contents of this directory:\n");
-    system("dir");
+        // Print the contents of the current directory
+        printf("\n");
+        printf("Here is the contents of this directory:\n");
+        system("dir");
 
-    // Print a few lines from a file
-    printf("\n");
-    printf("Here is the first few lines of main.c:\n");
-    system("head -4 main.c");
+        // Print a few lines from a file
+        printf("\n");
+        printf("Here is the first few lines of main.c:\n");
+        system("head -4 main.c");
 
-    // count up a bunch of times
-    i = 0;
-    do {
-        printf("%i", i);
-        delay(100000);
-        i++;
-    } while(i < 10);
+        // count up a bunch of times
+        i = 0;
+        do {
+                printf("%i", i);
+                delay(100000);
+                i++;
+        } while(i < 10);
 
-    return 0;
+        return 0;
 }
